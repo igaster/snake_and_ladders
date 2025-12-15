@@ -30,7 +30,16 @@ while running:
                 print("Space Precces")
 
     screen.fill(WHITE)
+
+    # Γραμμή
     pygame.draw.line(screen, BLACK, (1, 1), (100, 100), 3)
+
+    # Ορθογώνιο, μόνο περίγραμμα
+    pygame.draw.rect(screen, BLACK, (30, 30, 40, 80), 1)
+
+    # Ορθογώνιο, με γέμισμα
+    pygame.draw.rect(screen, BLACK, (130, 120, 40, 80))
+
 
     pygame.display.flip()
 
