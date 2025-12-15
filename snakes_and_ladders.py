@@ -2,6 +2,9 @@ import pygame
 import random
 import sys
 
+# Settings
+CELL = 50
+
 # Colors
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
@@ -31,14 +34,18 @@ while running:
 
     screen.fill(WHITE)
 
-    # Γραμμή
-    pygame.draw.line(screen, BLACK, (1, 1), (100, 100), 3)
+    for i in range(1, 11):
+        pygame.draw.line(screen, BLACK, (i * CELL, 0), (i * CELL, 500), 3)
+        pygame.draw.line(screen, BLACK, (0, i * CELL), (500, i * CELL), 3)
 
-    # Ορθογώνιο, μόνο περίγραμμα
-    pygame.draw.rect(screen, BLACK, (30, 30, 40, 80), 1)
-
-    # Ορθογώνιο, με γέμισμα
-    pygame.draw.rect(screen, BLACK, (130, 120, 40, 80))
+    # # Γραμμή
+    # pygame.draw.line(screen, BLACK, (100, 100), (600, 100), 3)
+    #
+    # # Ορθογώνιο, μόνο περίγραμμα
+    # pygame.draw.rect(screen, BLACK, (30, 30, 40, 80), 1)
+    #
+    # # Ορθογώνιο, με γέμισμα
+    # pygame.draw.rect(screen, BLACK, (130, 120, 40, 80))
 
 
     pygame.display.flip()
