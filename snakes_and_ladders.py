@@ -38,7 +38,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-        # Check if space was pressed
+        # Ελέγος αν πατήθηκε το πλήκτρο space
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE:
                 print("Space Pressed")
