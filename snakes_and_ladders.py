@@ -41,7 +41,7 @@ while running:
         # Check if space was pressed
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE:
-                print("Space Precces")
+                print("Space Pressed")
 
     screen.fill(WHITE)
 
