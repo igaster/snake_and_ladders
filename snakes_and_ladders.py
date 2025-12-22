@@ -19,11 +19,11 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Φιδάκια και Σκάλες")
 
 # Font
-font = pygame.font.SysFont(None, 24)
+font = pygame.font.SysFont(None, 32)
 
 # Βοηθητική συνάρτηση δέχεται μία θέση του παιχνιδιού (1-100)
 # και επιστρέφει τις συντεταγμένες (x,y) του κέντρου
-def index_to_grid(index):
+def index_to_xy(index):
     index = index -1
     y = 9 - (index // 10)
     x = index % 10
@@ -49,9 +49,10 @@ while running:
         pygame.draw.line(screen, BLACK, (i * CELL, 0), (i * CELL, 10 * CELL), 3)
         pygame.draw.line(screen, BLACK, (0, i * CELL), (10 * CELL, i * CELL), 3)
 
+
     for i in range(1, 101):
         text_surface = font.render(str(i), True, GRAY)
-        text_rect = text_surface.get_rect(center=index_to_grid(i))
+        text_rect = text_surface.get_rect(center=index_to_xy(i))
         screen.blit(text_surface, text_rect)
 
     # # Γραμμή
